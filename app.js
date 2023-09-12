@@ -15,6 +15,13 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.post('/', (req,res) => {
+  const { passwordLength, lowerCase, upperCase, numbers, symbols, excludedCharacters } = req.body
+  
+  console.log(req.body)
+  res.send('generate password')
+})
+
 app.listen(port, () => {
   console.log(`express server is running on http://localhost:${port}`)
 })

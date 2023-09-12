@@ -7,7 +7,7 @@
       </div>
 
       <div>
-        <form>
+        <form action="/" method="POST">
           <div class="form-group row mt-3">
             <label for="passwordLength" class="col-sm-5 col-form-label" >Password Length</label>
             <div class="col-sm-7">
@@ -21,7 +21,7 @@
             <label class="col-sm-5">Include Lowercase Characters</label>
             <div class="col-sm-7">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="lowerCase">
+                <input class="form-check-input" type="checkbox" id="lowerCase" name="lowerCase">
                 <label class="form-check-label" for="lowerCase">(e.g. a~z)</label>
               </div>
             </div>
@@ -31,7 +31,7 @@
             <label class="col-sm-5">Include Uppercase Characters</label>
             <div class="col-sm-7">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="upperCase">
+                <input class="form-check-input" type="checkbox" id="upperCase" name="upperCase">
                 <label class="form-check-label" for="upperCase">(e.g. A~Z)</label>
               </div>
             </div>
@@ -41,7 +41,7 @@
             <label class="col-sm-5">Include Numbers</label>
             <div class="col-sm-7">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="numbers">
+                <input class="form-check-input" type="checkbox" id="numbers" name="numbers">
                 <label class="form-check-label" for="numbers">(e.g. 0~9)</label>
               </div>
             </div>
@@ -51,8 +51,8 @@
             <label class="col-sm-5">Include Symbols</label>
             <div class="col-sm-7">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="symbols">
-                <label class="form-check-label" for="symbols">(e.g. ~!@#$%^&*()_+-=[]\{}|;':",./<>?* )</label>
+                <input class="form-check-input" type="checkbox" id="symbols" name="symbols">
+                <label class="form-check-label" for="symbols">(e.g. `~!@#$%^&*()_+-=[]\{}|;:,./<>?* )</label>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@
             <label class="col-sm-5">Exclude Characters</label>
             <div class="col-sm-7">
               <div>
-                <input class="form-control" type="text" id="excludedCharacters">
+                <input class="form-control" type="text" id="excludedCharacters" name="excludedCharacters">
                 <small id="helpPassword" class="form-text text-muted d-block">These characters will not appear in the
                   password.</small>
               </div>
