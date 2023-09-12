@@ -1,0 +1,9 @@
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75vh;
+  width: 100vh;
+  background-color: #E8F5E9;
+  padding: 50px;
+}
