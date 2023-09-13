@@ -11,8 +11,8 @@
           <div class="form-group row mt-3">
             <label for="passwordLength" class="col-sm-5 col-form-label" >Password Length</label>
             <div class="col-sm-7">
-              <input type="number" class="form-control" id="passwordLength" name='passwordLength' placeholder="請輸入密碼長度..."
-                min="4" max="16">
+              <input type="number" class="form-control" id="passwordLength" name='passwordLength' placeholder="4~16"
+                min="4" max="16" value={{options.passwordLength}}>
               <small id="helpPassword" class="form-text text-muted">Lentgh is available between 4~16.</small>
             </div>
           </div>
@@ -21,7 +21,7 @@
             <label class="col-sm-5">Include Lowercase Characters</label>
             <div class="col-sm-7">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="lowerCase" name="lowerCase">
+                <input class="form-check-input" type="checkbox" id="lowerCase" name="lowerCase" {{#if options.lowerCase }} checked {{/if}}>
                 <label class="form-check-label" for="lowerCase">(e.g. a~z)</label>
               </div>
             </div>
@@ -31,7 +31,7 @@
             <label class="col-sm-5">Include Uppercase Characters</label>
             <div class="col-sm-7">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="upperCase" name="upperCase">
+                <input class="form-check-input" type="checkbox" id="upperCase" name="upperCase" {{#if options.upperCase }} checked {{/if}}>
                 <label class="form-check-label" for="upperCase">(e.g. A~Z)</label>
               </div>
             </div>
@@ -41,7 +41,7 @@
             <label class="col-sm-5">Include Numbers</label>
             <div class="col-sm-7">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="numbers" name="numbers">
+                <input class="form-check-input" type="checkbox" id="numbers" name="numbers" {{#if options.numbers }} checked {{/if}}>
                 <label class="form-check-label" for="numbers">(e.g. 0~9)</label>
               </div>
             </div>
@@ -51,7 +51,7 @@
             <label class="col-sm-5">Include Symbols</label>
             <div class="col-sm-7">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="symbols" name="symbols">
+                <input class="form-check-input" type="checkbox" id="symbols" name="symbols"  {{#if options.symbols }} checked {{/if}}>
                 <label class="form-check-label" for="symbols">(e.g. `~!@#$%^&*()_+-=[]\{}|;:,./<>?* )</label>
               </div>
             </div>
@@ -61,8 +61,8 @@
             <label class="col-sm-5">Exclude Characters</label>
             <div class="col-sm-7">
               <div>
-                <input class="form-control" type="text" id="excludedCharacters" name="excludedCharacters">
-                <small id="helpPassword" class="form-text text-muted d-block">These characters will not appear in the
+                <input class="form-control" type="text" id="excludedCharacters" name="excludedCharacters" value={{options.excludedCharacters}}>
+                <small id="helpPassword" class="form-text text-muted d-block mb-3">These characters will not appear in the
                   password.</small>
               </div>
             </div>
@@ -71,7 +71,7 @@
           {{#if password}}
           <div class="password">
             <div>
-              Your Password: <code id="code">{{password}}</code>
+              <span>Your Password:</span><code id="code" class="ms-3">{{password}}</code>
             </div>
           </div>
           {{/if}}

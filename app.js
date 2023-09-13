@@ -18,10 +18,8 @@ app.get('/', (req, res) => {
 
 app.post('/', (req,res) => {
   const options = req.body
-  console.log("options",options)
+  console.log(options)
   const password = generatePassword(options)
-  
-  console.log(req.body)
   res.render('index', { password, options })
 })
 

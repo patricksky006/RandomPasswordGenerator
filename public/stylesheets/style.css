@@ -7,3 +7,11 @@
   background-color: #E8F5E9;
   padding: 50px;
 }
+
+.password {
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  height: 50px;
+  background-color:hwb(58 63% 8%)
+}

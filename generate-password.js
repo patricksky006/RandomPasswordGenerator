@@ -37,7 +37,7 @@ function generatePassword(options) {
     }
     
     //限制條件
-    if (options.length < 4 || options.length > 16) {
+    if (options.length < 4 || options.length > 16 || options.passwordLength === '') {
     return password = 'Please enter the correct password length'
   }
 
